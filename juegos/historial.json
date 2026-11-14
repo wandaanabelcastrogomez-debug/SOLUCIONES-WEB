@@ -13,6 +13,13 @@
       "titulo": "Decisiones en el camino: condicionales",
       "archivo": "semana-02.html",
       "fecha": "2025-11-14"
+    },
+    {
+      "semana": 3,
+      "concepto": "bucles",
+      "titulo": "Repetir sin copiar: bucles",
+      "archivo": "semana-03.html",
+      "fecha": "2025-11-14"
     }
   ]
 }
