@@ -20,6 +20,13 @@
       "titulo": "Repetir sin copiar: bucles",
       "archivo": "semana-03.html",
       "fecha": "2025-11-14"
+    },
+    {
+      "semana": 4,
+      "concepto": "funciones",
+      "titulo": "Máquinas reutilizables: funciones",
+      "archivo": "semana-04.html",
+      "fecha": "2025-11-14"
     }
   ]
 }
