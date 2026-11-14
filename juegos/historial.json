@@ -34,6 +34,13 @@
       "titulo": "Listas ordenadas: arrays",
       "archivo": "semana-05.html",
       "fecha": "2025-11-14"
+    },
+    {
+      "semana": 6,
+      "concepto": "recursión",
+      "titulo": "Mirarse al espejo: recursión",
+      "archivo": "semana-06.html",
+      "fecha": "2025-11-14"
     }
   ]
 }
