@@ -27,6 +27,13 @@
       "titulo": "Máquinas reutilizables: funciones",
       "archivo": "semana-04.html",
       "fecha": "2025-11-14"
+    },
+    {
+      "semana": 5,
+      "concepto": "arrays/listas",
+      "titulo": "Listas ordenadas: arrays",
+      "archivo": "semana-05.html",
+      "fecha": "2025-11-14"
     }
   ]
 }
