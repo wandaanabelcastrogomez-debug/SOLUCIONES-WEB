@@ -34,57 +34,65 @@
   <span class="etiqueta">Lógica de programación desde cero</span>
   <h1>Minijuegos de lógica</h1>
   <p class="intro">Cada semana se publica un minijuego nuevo para practicar un concepto de lógica de programación. Aquí están todos, también los de semanas anteriores.</p>
-  <div class="lista" id="lista"><div class="vacio">Cargando minijuegos…</div></div>
-  <p class="pie" id="pie"></p>
-  <noscript><p class="vacio">Activa JavaScript para ver la lista. Mientras tanto, cada juego está en <code>semana-01.html</code>, <code>semana-02.html</code>, etc.</p></noscript>
+  <div class="lista">
+      <a class="tarjeta" href="semana-08.html">
+        <span class="semana">Semana 8</span>
+        <h2>Cada dato en su caja: tipos de datos</h2>
+        <p class="concepto">Concepto: <strong>variables y tipos</strong></p>
+        <p class="fecha">2026-11-16</p>
+        <span class="jugar">Jugar &rarr;</span>
+      </a>
+      <a class="tarjeta" href="semana-07.html">
+        <span class="semana">Semana 7</span>
+        <h2>Buscar sin perderte: algoritmos básicos</h2>
+        <p class="concepto">Concepto: <strong>algoritmos básicos (buscar y ordenar)</strong></p>
+        <p class="fecha">2026-11-15</p>
+        <span class="jugar">Jugar &rarr;</span>
+      </a>
+      <a class="tarjeta" href="semana-06.html">
+        <span class="semana">Semana 6</span>
+        <h2>Mirarse al espejo: recursión</h2>
+        <p class="concepto">Concepto: <strong>recursión</strong></p>
+        <p class="fecha">2025-11-14</p>
+        <span class="jugar">Jugar &rarr;</span>
+      </a>
+      <a class="tarjeta" href="semana-05.html">
+        <span class="semana">Semana 5</span>
+        <h2>Listas ordenadas: arrays</h2>
+        <p class="concepto">Concepto: <strong>arrays/listas</strong></p>
+        <p class="fecha">2025-11-14</p>
+        <span class="jugar">Jugar &rarr;</span>
+      </a>
+      <a class="tarjeta" href="semana-04.html">
+        <span class="semana">Semana 4</span>
+        <h2>Máquinas reutilizables: funciones</h2>
+        <p class="concepto">Concepto: <strong>funciones</strong></p>
+        <p class="fecha">2025-11-14</p>
+        <span class="jugar">Jugar &rarr;</span>
+      </a>
+      <a class="tarjeta" href="semana-03.html">
+        <span class="semana">Semana 3</span>
+        <h2>Repetir sin copiar: bucles</h2>
+        <p class="concepto">Concepto: <strong>bucles</strong></p>
+        <p class="fecha">2025-11-14</p>
+        <span class="jugar">Jugar &rarr;</span>
+      </a>
+      <a class="tarjeta" href="semana-02.html">
+        <span class="semana">Semana 2</span>
+        <h2>Decisiones en el camino: condicionales</h2>
+        <p class="concepto">Concepto: <strong>condicionales</strong></p>
+        <p class="fecha">2025-11-14</p>
+        <span class="jugar">Jugar &rarr;</span>
+      </a>
+      <a class="tarjeta" href="semana-01.html">
+        <span class="semana">Semana 1</span>
+        <h2>Cajas con nombre: variables</h2>
+        <p class="concepto">Concepto: <strong>variables</strong></p>
+        <p class="fecha">2025-11-14</p>
+        <span class="jugar">Jugar &rarr;</span>
+      </a>
+  </div>
+  <p class="pie">8 minijuego/s publicados · último: semana 8 (variables y tipos)</p>
 </div>
-
-<script>
-(function () {
-  "use strict";
-  var lista = document.getElementById("lista");
-  var pie = document.getElementById("pie");
-
-  function esc(t) {
-    return String(t === undefined || t === null ? "" : t)
-      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-  }
-
-  function pintar(juegos) {
-    juegos.sort(function (a, b) { return b.semana - a.semana; });
-    lista.innerHTML = juegos.map(function (j) {
-      return '<a class="tarjeta" href="' + esc(j.archivo) + '">' +
-        '<span class="semana">Semana ' + esc(j.semana) + '</span>' +
-        '<h2>' + esc(j.titulo) + '</h2>' +
-        '<p class="concepto">Concepto: <strong>' + esc(j.concepto) + '</strong></p>' +
-        '<p class="fecha">' + esc(j.fecha || "") + '</p>' +
-        '<span class="jugar">Jugar &rarr;</span>' +
-        '</a>';
-    }).join("");
-    var ultimo = juegos[0];
-    pie.textContent = juegos.length + (juegos.length === 1 ? " minijuego publicado" : " minijuegos publicados") +
-      (ultimo ? " · último: semana " + ultimo.semana + " (" + ultimo.concepto + ")" : "");
-  }
-
-  fetch("historial.json?t=" + Date.now(), { cache: "no-store" })
-    .then(function (r) {
-      if (!r.ok) throw new Error("HTTP " + r.status);
-      return r.json();
-    })
-    .then(function (datos) {
-      var juegos = (datos && datos.juegos) || [];
-      if (!juegos.length) {
-        lista.innerHTML = '<div class="vacio">Todavía no hay minijuegos publicados. Vuelve la próxima semana.</div>';
-        return;
-      }
-      pintar(juegos);
-    })
-    .catch(function () {
-      lista.innerHTML = '<div class="vacio">No se pudo cargar la lista de minijuegos en este momento. ' +
-        'Recarga la página; si sigue igual, abre el juego que buscas directamente con su dirección: ' +
-        'semana-01.html, semana-02.html, semana-03.html…</div>';
-    });
-})();
-</script>
 </body>
 </html>

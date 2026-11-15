@@ -41,6 +41,20 @@
       "titulo": "Mirarse al espejo: recursión",
       "archivo": "semana-06.html",
       "fecha": "2025-11-14"
+    },
+    {
+      "semana": 7,
+      "concepto": "algoritmos básicos (buscar y ordenar)",
+      "titulo": "Buscar sin perderte: algoritmos básicos",
+      "archivo": "semana-07.html",
+      "fecha": "2026-11-15"
+    },
+    {
+      "semana": 8,
+      "concepto": "variables y tipos",
+      "titulo": "Cada dato en su caja: tipos de datos",
+      "archivo": "semana-08.html",
+      "fecha": "2026-11-16"
     }
   ]
 }
